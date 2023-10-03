@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Config Scroll Bar*/
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar-track {
+  background: #353a43; 
+}
+::-webkit-scrollbar-thumb {
+  background: #2a3043; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+::-webkit-scrollbar-thumb:hover {
+  background: #212636; 
+}
+
+/* Config init */
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #1d1f25;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Config Header */
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  background-color: #282c34;
+  position: fixed;
+  box-shadow: 1px 2px 20px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu-header{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-right: 25px;
+}
+
+.menu-header > a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.menu-header > li:hover {
+  text-decoration-line: underline;
+  text-underline-offset: 5px;
+}
+
+.menu-header > .active{
+  text-decoration-line: underline;
+  text-underline-offset: 5px;
+}
+
+/* Config home */
+.home{
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.home > span {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* Config About */
+.about{
+  width: 75vw;
+  height: 100vh;
+  padding-top: 70px;
+}
+
+.about > h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.about > p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 }
